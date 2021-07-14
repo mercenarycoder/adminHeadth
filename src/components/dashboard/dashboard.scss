@@ -1,0 +1,40 @@
+.container_dashboard{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [sidemenu-start] 20% [sidemenu-end] 80% [main-content-end] ;
+    grid-template-rows: [navigation-start] 15% [navigation-end] 90% [page-end];
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    // background: transparent;
+}
+.dashboard_nav{
+    display: flex;
+    font-size: 1.5rem;
+    grid-column: sidemenu-start / main-content-end;
+    grid-row: navigation-start / navigation-end;
+    align-items: center;
+    align-content: center;
+    // justify-content: center;
+    &_item{
+
+        &-1{
+            align-self: flex-end;
+        }
+    }
+    
+}
+.dashboard{
+    // grid-row: navigation-end / -1;
+    &_sidebar{
+        grid-column: sidemenu-start / sidemenu-end;
+        grid-row: navigation-end / page-end;
+        background-color: aqua;
+    }
+    &_content{
+        grid-column: sidemenu-end / main-content-end;
+        grid-row: navigation-end / page-end;
+        background-color: #fff;
+    }
+}
