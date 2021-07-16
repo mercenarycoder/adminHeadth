@@ -1,0 +1,19 @@
+.dashy_Button{
+    font-size: inherit;
+    font-weight: inherit;
+    color: white;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.6);
+    transition: all .2s;
+    height: inherit;
+    width: inherit;
+    border: none;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover { 
+        transform: translateY(-1.5rem);
+    }
+    &:active {
+        transform: translateY(1.3rem);
+    }
+}

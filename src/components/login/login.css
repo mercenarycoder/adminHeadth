@@ -4,7 +4,7 @@
   width: 100vw;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: start;
 }
 @media (max-width:800px) {
   
@@ -19,12 +19,12 @@
   color: #131125;
   font-size: 2.3rem;
   font-weight: 700;
-  text-align: center;
+  text-align: start;
   margin: 0;
 }
 .form {
   display: grid;
-  grid-template-columns: max-content;
+  grid-template-columns: 90%;
   /* grid-template-rows: 10rem 10rem 10rem; */
   justify-content: center;
   align-items: center;
@@ -33,32 +33,48 @@
 }
 .field {
   position: relative;
-  padding: 1.5em 0;
+  margin-bottom: 2rem;
+  width: 80%;
+  padding: 1.5em 1em;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+}
+.icons{
+  align-self: center;
+  color: #bebebe;
+  justify-content: flex-end;
+}
+.input_text {
+  color: black;
+  height: 100%;
+  width: 80%;
+  flex: 0 1 auto;
+  align-self: center;
+  font-size: 1.45em;
+  /* padding: 0.1em 2em; */
+  border: none;
+  /* border-radius: 5px; */
+  background-repeat: no-repeat;
+  /* background-position: right 1em top 1.25em; */
 }
 .input_label {
   font-size: 1.35em;
   position: absolute;
-  top: 0.60em;
-  left: 1.5em;
+  top: -0.8em;
+  left: 1.0em;
   color: gray;
   background: #ffffff;
   padding: 0 0.5em;
 }
-.input_label:focus {
+
+.field:focus {
   color: #2028eb;
   font-weight: 600;
 }
-.input_text {
-  color: black;
-  width: inherit;
-  font-size: 1.45em;
-  padding: 1em 2em;
-  border: 1px solid #bebebe;
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-position: right 1em top 1.25em;
-}
-.input_text:focus {
+.field:focus {
   outline-color: #2028eb;
   border-color: #2028eb;
 }

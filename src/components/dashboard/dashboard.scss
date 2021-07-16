@@ -3,38 +3,104 @@
     height: 100vh;
     display: grid;
     grid-template-columns: [sidemenu-start] 20% [sidemenu-end] 80% [main-content-end] ;
-    grid-template-rows: [navigation-start] 15% [navigation-end] 90% [page-end];
+    grid-template-rows: [navigation-start] 12% [navigation-end] 90% [page-end];
     color: white;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     // background: transparent;
 }
 .dashboard_nav{
     display: flex;
     font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.6);
     grid-column: sidemenu-start / main-content-end;
     grid-row: navigation-start / navigation-end;
     align-items: center;
-    align-content: center;
+    // align-content: center;
+
     // justify-content: center;
     &_item{
-
+        cursor: pointer;
+        // flex:1 1 0;
         &-1{
-            align-self: flex-end;
+            // flex-basis: 40%;
+            flex:2 1 0;
+            // align-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &-2{
+            flex: 1.2 1 0;
+            height: 100%;
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        &-3{
+            flex: .50 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
     
+}
+.profile{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    &_text{
+        font-size: 1.6rem;
+        margin-left: 1rem;
+    }
+}
+.icon_dashboard{
+    color: white;
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+.notification{
+    position: relative;
+    &_text{
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        right: -1rem;
+    }
 }
 .dashboard{
     // grid-row: navigation-end / -1;
     &_sidebar{
         grid-column: sidemenu-start / sidemenu-end;
         grid-row: navigation-end / page-end;
-        background-color: aqua;
+        // background-color: aqua;
     }
     &_content{
         grid-column: sidemenu-end / main-content-end;
         grid-row: navigation-end / page-end;
         background-color: #fff;
+    }
+}
+.sidebar_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &_items{
+        flex: 2 1 0;
+        background-color: blueviolet;
+    }
+    &_footer{
+        flex: 1 1 0;
     }
 }
