@@ -1,21 +1,25 @@
 .container_dashboard{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: [sidemenu-start] 20% [sidemenu-end] 80% [main-content-end] ;
-    grid-template-rows: [navigation-start] 12% [navigation-end] 90% [page-end];
+    grid-template-columns: [sidemenu-start] 15% [sidemenu-end] 85% [main-content-end] ;
+    grid-template-rows: [navigation-start] 10% [navigation-end] max-content [page-end];
     color: white;
+    // background: transparent;
+}
+.error_dialog{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // background: transparent;
 }
 .dashboard_nav{
     display: flex;
     font-size: 1.5rem;
     background-color: rgba(0,0,0,0.6);
     grid-column: sidemenu-start / main-content-end;
-    grid-row: navigation-start / navigation-end;
+    // grid-row: navigation-start / navigation-end;
+    height: 6.5rem;
+    // position: sticky;
     align-items: center;
     // align-content: center;
 
@@ -42,15 +46,17 @@
             flex: .50 1 auto;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
         }
     }
     
 }
 .profile{
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
+    background-size: cover;
+    background-position: center;
     background-color: #fff;
     &_text{
         font-size: 1.6rem;
@@ -83,24 +89,176 @@
     &_sidebar{
         grid-column: sidemenu-start / sidemenu-end;
         grid-row: navigation-end / page-end;
+        display: grid;
         // background-color: aqua;
+        &_main{
+            display: grid;
+            grid-template-rows: repeat(9,[row-start] 1fr);
+            background-color: rgba(0,0,0,0.5);
+        
+            &_items{
+                // flex: 2 1 0;
+                grid-row: row-start / row-start 8;
+                &>*{
+                    font-size: 1.8rem;
+                }
+            }
+            &_footer{
+                grid-row: row-start 8 / span 1;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+            &_item{
+                display: flex;
+                align-items: center;
+                margin: 1rem;
+                justify-content: flex-start;
+            }
+            &_icon{
+                margin: 2rem;
+                border-radius: .3rem;
+                cursor: pointer;
+                // display: inline-block;
+                &:hover{
+                    background: rgba(0,0,0,0.6);
+                }
+            }
+        }
     }
     &_content{
         grid-column: sidemenu-end / main-content-end;
-        grid-row: navigation-end / page-end;
-        background-color: #fff;
+        // grid-row: navigation-end / -1;
+        min-height: 100vh;
+        // margin-bottom: 4rem;
+        // background-color: #fff;
+        padding: 1rem;
     }
 }
-.sidebar_main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.main1{
+    // display: grid;
+    // grid-template-columns: repeat (6,[main] 1fr);
+    display: none;
+}
+.search_main{
+    grid-column: main / main 5;
+    display: grid;
     align-items: center;
-    &_items{
+    justify-content: center;
+    grid-template-columns: repeat(5,[num] minmax(min-content,1fr));
+    &_number{
+        grid-column: num / -1;
+        padding: 2rem 1rem;
+        font-size: 1.6rem;
+        border: 0.2rem solid  rgb(151, 148, 148);
+        color: black;
+        border-radius: 2rem;
+        margin: 2rem;
+        font-weight: 500;
+        
+        &>input:focus{
+            outline: blue;
+        }
+    }
+    &_btn-container{
+        grid-column: num 2 / num 4;
+    }
+}
+.recent_searches{
+    grid-column: main / -1;
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media only screen and(max-width:1300px){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and(max-width:900px){
+        grid-template-columns: 1fr;
+    }
+    &_user{
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #fff;
+        font-size: 1.5rem;
+        color: black;
+        display: flex;
+        &_part1{
+            display: flex;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+        &_logo{
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+            border: 1px solid white;
+            background-size: cover;
+            background-position: center;
+        }
+        &_text{
+            display: flex;
+            flex-direction: column;
+            flex: 2 1 0;
+            &_part1{
+                display: flex;
+            }
+            &_part2{
+                display: flex;
+                margin-top: 1rem;
+            }
+            &_part3{
+                display: flex;
+                margin-top: 1rem;
+            }
+        }
+    }
+    &_name{
+        font-size: 1.7rem;
+        font-weight: 600;
+        align-self: center;
         flex: 2 1 0;
-        background-color: blueviolet;
+        
     }
-    &_footer{
-        flex: 1 1 0;
+    &_btn{
+        color: white;
+        border-radius: 2rem;
+        padding: 0.2rem 1rem;
+        margin-left: 1rem;
+        align-self: center;
+        cursor: pointer;
+        background-color: rgb(94, 186, 216);
     }
+    &_document{
+        color: white;
+        border-radius: 2rem;
+        padding: 0.2rem 1rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        text-align: start;
+        align-self: center;
+        background-color: rgb(94, 186, 216);
+    }
+    &_dob{
+        font-size: 1.7rem;
+        font-weight: 600;
+        align-self: center;
+        text-align: end;
+        flex: 2 1 0;
+        
+    }
+    &_icon{
+        align-self: center;
+        margin: 1rem;
+    }
+    &_location{
+        font-size: 1.7rem;
+        font-weight: 600;
+        align-self: center;
+        text-align: start;
+        flex: 3 1 0;
+        
+    }
+
 }
