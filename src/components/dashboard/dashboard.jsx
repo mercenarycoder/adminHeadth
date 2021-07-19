@@ -272,7 +272,9 @@ export default function Dashboard() {
                                 </div>
                             </div>
                         </div>
+                    {/* history code is here */}
                         <div className="history_view">
+                            <h2 className="history_view_heading">History Section</h2>
                             <ul className="history_view_list">
                                 <li className="history_view_item">
                                     <div className="history_view_item_title">Doctor visit</div>
@@ -300,7 +302,9 @@ export default function Dashboard() {
                                 </li>
                             </ul>
                         </div>
+                    {/* allergy code is here */}
                         <div className="allergy_view">
+                        <h2 className="allergy_view_heading">History Section</h2>
                             <ul className="allergy_view_list">
                                 <li className="allergy_view_item">
                                     <div className="allergy_view_item_title">Doctor visit</div>
@@ -328,7 +332,9 @@ export default function Dashboard() {
                                 </li>
                             </ul>
                         </div>
+                    {/* Diesease Code is here */}
                         <div className="diesease_view">
+                        <h2 className="diesease_view_heading">History Section</h2>
                             <ul className="diesease_view_list">
                                 <li className="diesease_view_item">
                                     <div className="diesease_view_item_title">Doctor visit</div>
@@ -356,7 +362,9 @@ export default function Dashboard() {
                                 </li>
                             </ul>
                         </div>
+                   {/* Medicine code is here */}
                         <div className="medicine_view">
+                        <h2 className="medicine_view_heading">History Section</h2>
                             <ul className="medicine_view_list">
                                 <li className="medicine_view_item">
                                     <div className="medicine_view_item_title">Doctor visit</div>
@@ -392,6 +400,11 @@ export default function Dashboard() {
                                 </li>
                             </ul>
                         </div>
+                   {/* Reports code is here */}
+                        <div className="report_heading">
+                            <h2 className="report_heading_h2">Reports</h2>
+                        {/* </div> */}
+
                         <div className="reports">
                             <div className="report">
                                 <div className="report_name">
@@ -462,6 +475,60 @@ export default function Dashboard() {
                         
                         </div>
                     </div>
+                    {/* Prescriptions Code is here */}
+                    <div className="prescriptions_heading">
+                        <h2 className="prescriptions_heading_h2">Prescriptions</h2>
+                        <div className="prescriptions">
+                            <div className="prescription">
+                            <div className="prescription_name">
+                                    Prescription Main
+                                </div>
+                                <div className="prescription_date">
+                                    10-07-2021
+                                </div>
+                                <div className="prescription_doctor">
+                                    Dr. Manjeet Singh
+                                </div>
+                                <div className="prescription_observe">
+                                    Lorem, ipsum dolor......
+                                </div>
+                                <div className="prescription_logo">
+                                    <img src={process.env.PUBLIC_URL + 'assets/3dlogo.png'} alt="prescription logo" className="prescription_icon"/>
+                                </div>
+                                <div className="prescription_view">
+                                    <div className="prescription_viewer">
+                                        View
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               {/* Vaccinations Code is here */}
+                    <div className="prescriptions_heading">
+                        <h2 className="prescriptions_heading_h2">Vaccination</h2>
+                        <div className="prescriptions">
+                            <div className="prescription">
+                            <div className="prescription_name">
+                                    Vaccine Name
+                                </div>
+                                <div className="prescription_date">
+                                    Getting Date:- 10-07-2021
+                                </div>
+                                <div className="prescription_date">
+                                    Renewal Date:- 10-07-2021
+                                </div>
+                                <div className="prescription_logo">
+                                    <img src={process.env.PUBLIC_URL + 'assets/3dlogo.png'} alt="prescription logo" className="prescription_icon"/>
+                                </div>
+                                <div className="prescription_view">
+                                    <div className="prescription_viewer">
+                                        View
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

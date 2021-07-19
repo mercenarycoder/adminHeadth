@@ -128,18 +128,18 @@
   &_content {
     grid-column: sidemenu-end / main-content-end;
     // grid-row: navigation-end / -1;
-    min-height: 100vh;
+    max-height: 87vh;
+    min-height: 87vh;
     // margin-bottom: 4rem;
     // background-color: #fff;
     padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat (6,[main] 1fr);
+    overflow-y: scroll;
   }
 }
 .main1 {
   // display: grid;
   // grid-template-columns: repeat (6,[main] 1fr);
-  display: none;
+  // display: none;
 }
 .search_main {
   grid-column: main / main 5;
@@ -260,7 +260,7 @@
   }
 }
 .main2 {
-
+  display: none;
 }
 .profile_intro {  
     grid-column: main / main 5;
@@ -269,6 +269,11 @@
   background-color: #fff;
   color: black;
   border-radius: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 500ms;
+  &:hover{
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  }
   &_image {
     display: grid;
     justify-content: center;
@@ -293,6 +298,7 @@
         font-size: 1.7rem;
         font-weight: 600;
         flex: 1 1 0;
+        text-transform: uppercase;
     }
     &_data {
         font-size: 1.9rem;
@@ -340,78 +346,340 @@
   }
 }
 .history_view {
-  &_list {
-      
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  &_heading{
+    color: rgb(31, 138, 31);
+    font-size: 2.4rem;
+    text-transform: uppercase;
   }
-  &_item {
+  // text-align: center;
+  &_list {
+      // text-decoration: none;
+      font-size: 1.9rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      list-style: none;
+      // width: 100%;
+    }
+    &_item:last-child{
+      margin-bottom: 2rem;
+    }
+    &_item {
+    padding: 1.2rem;
+    display: flex;
+    // margin: 1rem;
+    // margin-right: 3rem;
+    border-bottom:0.1rem solid #fff;
     &_title {
+      flex: 2 1 0;
+      align-self: flex-start;
     }
     &_options {
+      cursor: pointer;
     }
     &_icon {
+      color: #fff;
     }
   }
 }
-.allery_view {
-  &_list {
+.allergy_view {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  &_heading{
+    color: rgb(156, 22, 145);
+    font-size: 2.4rem;
+    text-transform: uppercase;
   }
-  &_item {
+  // text-align: center;
+  &_list {
+      // text-decoration: none;
+      font-size: 1.9rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      list-style: none;
+      // width: 100%;
+    }
+    &_item:last-child{
+      margin-bottom: 2rem;
+    }
+    &_item {
+    padding: 1.2rem;
+    display: flex;
+    // margin: 1rem;
+    // margin-right: 3rem;
+    border-bottom:0.1rem solid #fff;
     &_title {
+      flex: 2 1 0;
+      align-self: flex-start;
     }
     &_options {
+      cursor: pointer;
     }
     &_icon {
+      color: #fff;
     }
   }
 }
 .diesease_view {
-  &_list {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  &_heading{
+    color: rgb(177, 54, 38);
+    font-size: 2.4rem;
+    text-transform: uppercase;
   }
-  &_item {
+  // text-align: center;
+  &_list {
+      // text-decoration: none;
+      font-size: 1.9rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      list-style: none;
+      // width: 100%;
+    }
+    &_item:last-child{
+      margin-bottom: 2rem;
+    }
+    &_item {
+    padding: 1.2rem;
+    display: flex;
+    // margin: 1rem;
+    // margin-right: 3rem;
+    border-bottom:0.1rem solid #fff;
     &_title {
+      flex: 2 1 0;
+      align-self: flex-start;
     }
     &_options {
+      cursor: pointer;
     }
     &_icon {
-      color: white;
+      color: #fff;
     }
   }
 }
 .medicine_view {
-  &_list {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  &_heading{
+    color: rgb(9, 130, 146);
+    font-size: 2.4rem;
+    text-transform: uppercase;
   }
-  &_item {
+  // text-align: center;
+  &_list {
+      // text-decoration: none;
+      font-size: 1.9rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+      list-style: none;
+      // width: 100%;
+    }
+    &_item:last-child{
+      margin-bottom: 2rem;
+    }
+    &_item {
+    padding: 1.2rem;
+    display: flex;
+    // margin: 1rem;
+    // margin-right: 3rem;
+    border-bottom:0.1rem solid #fff;
     &_title {
-      &_minor {
+      flex: 1 1 0;
+      align-self: flex-start;
+      &_minor{
+        flex: 1 1 0;
       }
     }
+    
     &_options {
+      cursor: pointer;
     }
     &_icon {
-      color: white;
+      color: #fff;
     }
   }
 }
 .reports {
+  display: grid;
+  grid-template-columns: repeat(3,[row] 1fr);
+  @media only screen and(max-width:1300px){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @media only screen and(max-width:900px){
+    grid-template-columns: 1fr;
+  }
+}
+.report_heading{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1.5rem 0rem;
+  &_h2{
+    font-size: 2.8rem;
+    color: coral;
+    margin: 0;
+    padding: 0;
+    border-bottom: 0.1rem solid coral;
+  }
 }
 .report {
+  background-color: rgba(51, 45, 45, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  margin: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all .2s;
+  &:hover{
+    box-shadow: 0 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.2rem);
+  }
   &_viewer {
+    background-color: rgb(40, 54, 136);
+    color: white;
+    font-weight: 500;
+    padding: .5rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(10, 25, 109);
+    }
   }
   &_view {
+    margin-top: 1rem;
   }
   &_icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2.5rem;
+    width: inherit;
+
     border-radius: 1rem;
   }
   &_logo {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
   }
   &_doctor {
+    text-transform: capitalize;
+    font-size: 1.8rem;
   }
   &_type {
+    color: rgb(31, 189, 91);
+    font-weight: 600;
+    margin: 1rem 0rem;
   }
   &_date {
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
   }
   &_name {
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+.prescriptions {
+  display: grid;
+  grid-template-columns: repeat(3,[row] 1fr);
+  @media only screen and(max-width:1300px){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @media only screen and(max-width:900px){
+    grid-template-columns: 1fr;
+  }
+}
+.prescriptions_heading{
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 1.5rem 0rem;
+  &_h2{
+    font-size: 2.8rem;
+    color: rgb(65, 92, 211);
+    margin: 0;
+    padding: 0;
+    border-bottom: 0.1rem solid rgb(65, 92, 211);
+  }
+}
+.prescription {
+  background-color: rgba(51, 45, 45, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  margin: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all .2s;
+  &:hover{
+    box-shadow: 0 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.2rem);
+  }
+  &_viewer {
+    background-color: rgb(40, 54, 136);
+    color: white;
+    font-weight: 500;
+    padding: .5rem 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(10, 25, 109);
+    }
+  }
+  &_view {
+    margin-top: 1rem;
+  }
+  &_icon {
+    height: 2.5rem;
+    width: inherit;
+
+    border-radius: 1rem;
+  }
+  &_logo {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin: 1rem 2rem;
+    border-radius: 1rem;
+  }
+  &_doctor {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+  }
+  &_type {
+    color: rgb(31, 189, 91);
+    font-weight: 600;
+    margin: 1rem 0rem;
+  }
+  &_date {
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
+  }
+  &_name {
+    font-size: 1.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
