@@ -18,7 +18,6 @@ export default function Dashboard() {
         <div className="error_dialog"
             style={{
                 backgroundImage: `url(${process.env.PUBLIC_URL}assets/background_dashy.jpg)`,
-
             }}
         >
             <div
