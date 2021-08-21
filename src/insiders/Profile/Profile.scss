@@ -1,0 +1,83 @@
+.profile_intro {  
+    grid-column: main / main 5;
+  display: flex;
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: black;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: box-shadow 500ms;
+  &:hover{
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  }
+  &_image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  &_icon {
+    height: 8.5rem;
+    width: 8.5rem;
+    border-radius: 50%;
+  }
+  &_information {
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 0;
+    margin: 2rem;
+    justify-content: center;
+    &_name_row {
+        display: flex;
+    }
+    &_heading {
+        font-size: 1.7rem;
+        font-weight: 600;
+        flex: 1 1 0;
+        text-transform: uppercase;
+    }
+    &_data {
+        font-size: 1.9rem;
+        flex: 2 1 0;
+    }
+    &_mobile_row {
+        display: flex;
+    }
+    &_dob_row {
+        display: flex;
+    }
+    &_height_row {
+        display: flex;
+    }
+    &_weight_row {
+        display: flex;
+    }
+    &_blood_row {
+        display: flex;
+    }
+    &_counts {
+        display: flex;
+        margin-top: 1.5rem;
+      &>*{
+        padding: 1rem;
+        color: #fff;
+        font-size: 0.5rem 1.4rem;
+        margin: 1rem;
+        border-radius: 2rem;
+        text-align: center;
+      }
+        &_prescriptions {
+          background-color: pink;
+      }
+      &_vaccination {
+        background-color: rgb(194, 22, 51);
+      }
+      &_reports {
+        background-color: rgb(31, 189, 91);
+      }
+      &_history {
+        background-color: rgb(50, 87, 187);  
+    }
+    }
+  }
+}

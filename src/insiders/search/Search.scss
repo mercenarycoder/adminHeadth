@@ -1,0 +1,24 @@
+.search_main {
+    grid-column: main / main 5;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, [num] minmax(min-content, 1fr));
+    &_number {
+      grid-column: num / -1;
+      padding: 2rem 1rem;
+      font-size: 1.6rem;
+      border: 0.2rem solid rgb(151, 148, 148);
+      color: black;
+      border-radius: 2rem;
+      margin: 2rem;
+      font-weight: 500;
+  
+      & > input:focus {
+        outline: blue;
+      }
+    }
+    &_btn-container {
+      grid-column: num 2 / num 4;
+    }
+  }

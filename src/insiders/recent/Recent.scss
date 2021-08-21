@@ -1,0 +1,94 @@
+.recent_searches {
+    grid-column: main / -1;
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media only screen and(max-width:1300px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and(max-width:900px) {
+      grid-template-columns: 1fr;
+    }
+    &_user {
+      border-radius: 1rem;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #fff;
+      font-size: 1.5rem;
+      color: black;
+      display: flex;
+      &_part1 {
+        display: flex;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+      &_logo {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-size: cover;
+        background-position: center;
+      }
+      &_text {
+        display: flex;
+        flex-direction: column;
+        flex: 2 1 0;
+        &_part1 {
+          display: flex;
+        }
+        &_part2 {
+          display: flex;
+          margin-top: 1rem;
+        }
+        &_part3 {
+          display: flex;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &_name {
+      font-size: 1.7rem;
+      font-weight: 600;
+      align-self: center;
+      flex: 2 1 0;
+    }
+    &_btn {
+      color: white;
+      border-radius: 2rem;
+      padding: 0.2rem 1rem;
+      margin-left: 1rem;
+      align-self: center;
+      cursor: pointer;
+      background-color: rgb(94, 186, 216);
+    }
+    &_document {
+      color: white;
+      border-radius: 2rem;
+      padding: 0.2rem 1rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      text-align: start;
+      align-self: center;
+      background-color: rgb(94, 186, 216);
+    }
+    &_dob {
+      font-size: 1.7rem;
+      font-weight: 600;
+      align-self: center;
+      text-align: end;
+      flex: 2 1 0;
+    }
+    &_icon {
+      align-self: center;
+      margin: 1rem;
+    }
+    &_location {
+      font-size: 1.7rem;
+      font-weight: 600;
+      align-self: center;
+      text-align: start;
+      flex: 3 1 0;
+    }
+  }
