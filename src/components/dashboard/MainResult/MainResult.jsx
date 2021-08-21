@@ -6,13 +6,12 @@ import History from '../../../insiders/History/History';
 import Allergy from '../../../insiders/Allergy/Allergy';
 import Diesease from '../../../insiders/Diesease/Diesease';
 import Medicine from '../../../insiders/Medicine/Medicine';
-import Report from '../../../insiders/reports/Report';
+import Report from '../../../insiders/reports/Reports';
 import Prescriptions from '../../../insiders/Prescriptions/Prescriptions';
 import Vaccination from '../../../insiders/Prescriptions/Vaccination';
 
 function MainResult() {
     return (
-        <div>
             <div className="main2">
                 <Profile/>
                 {/* history code is here */}
@@ -30,8 +29,6 @@ function MainResult() {
                 {/* Vaccinations Code is here */}
                 <Vaccination/>
             </div>
-
-        </div>
     )
 }
 

@@ -1,0 +1,51 @@
+.dashboard_nav {
+    display: flex;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    grid-column: sidemenu-start / main-content-end;
+    // grid-row: navigation-start / navigation-end;
+    height: 6.5rem;
+    // position: sticky;
+    align-items: center;
+    // align-content: center;
+  
+    // justify-content: center;
+    &_item {
+      cursor: pointer;
+      // flex:1 1 0;
+      &-1 {
+        // flex-basis: 40%;
+        flex: 2 1 0;
+        // align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      &-2 {
+        flex: 1.2 1 0;
+        height: 100%;
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+      &-3 {
+        flex: 0.5 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .notification {
+    position: relative;
+    &_text {
+      position: absolute;
+      background-color: red;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+      right: -1rem;
+    }
+  }

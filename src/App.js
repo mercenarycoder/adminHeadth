@@ -3,8 +3,8 @@ import Dashboard from './components/dashboard/dashboard';
 import Login from './components/login/login';
 import Register from './components/register/register';
 import Overview from './insiders/overview/overview';
-import Prescriptions from './insiders/prescriptions/prescriptions';
-import Reports from './insiders/reports/reports';
+import Prescriptions from './insiders/Prescriptions/Prescriptions';
+import Reports from './insiders/reports/Reports';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {

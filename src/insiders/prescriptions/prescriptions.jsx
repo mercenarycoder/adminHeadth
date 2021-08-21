@@ -1,7 +1,7 @@
 import React from 'react';
 import './Prescriptions.scss';
 
-export default function Prescriptions() {
+function Prescriptions() {
     return (
         <div>
             <div className="prescriptions_heading">
@@ -34,3 +34,5 @@ export default function Prescriptions() {
         </div>
     )
 }
+
+export default Prescriptions;
