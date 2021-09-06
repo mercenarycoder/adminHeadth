@@ -4,9 +4,13 @@
   width: 100vw;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem 0;
+  z-index: 0;
+  position: absolute;
   align-items: center;
 }
-
+.container{
+  position: relative;
+}
 @media (max-width: 800px) {
   .register {
     grid-template-columns: 1fr;
@@ -34,7 +38,7 @@
   display: grid;
   grid-template-columns: [start] max-content [mid] max-content [end];
   justify-content: start;
-  grid-gap: 2rem 0;
+  grid-gap: 1rem 0;
   align-items: center;
 }
 .part_register_1 {
@@ -45,7 +49,7 @@
   grid-column: mid / end;
 }
 .part_register {
-  grid-column: start / end;
+  grid-column: start / -1;
   width: 93%;
 }
 .heading_register {
@@ -81,4 +85,28 @@
   margin: 2rem 2rem;
   font-weight: 600;
 }
-
+.fieldR {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 80%;
+  height: 5rem;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+}
+.input_textR {
+  color: black;
+  height: 90%;
+  width: 100%;
+  flex: 0 1 auto;
+  align-self: center;
+  font-size: 1.45em;
+  outline-color: #131125;
+  /* padding: 0.1em 2em; */
+  border: none;
+  /* border-radius: 5px; */
+  background-repeat: no-repeat;
+  /* background-position: right 1em top 1.25em; */
+}

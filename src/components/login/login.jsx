@@ -3,6 +3,7 @@ import './login.css';
 import Button from '../../utilities/button/Button';
 import {Link} from 'react-router-dom';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import {observer} from 'mobx-react-lite';
 
 function Login(props) {
     const redirectIt=function(e){
@@ -43,4 +44,4 @@ function Login(props) {
     )
 }
 
-export default Login;
+export default observer(Login);

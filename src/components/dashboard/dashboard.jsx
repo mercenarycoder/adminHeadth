@@ -9,8 +9,9 @@ import MainSearch from './MainSearch/MainSearch';
 import MainResult from './MainResult/MainResult';
 import Navigation from './Navigation/Navigation';
 import SideNavigation from './SideNavigation/SideNavigation';
+import {observer} from 'mobx-react-lite';
 
-export default function Dashboard() {
+function Dashboard() {
     return (
         <div className="error_dialog"
             style={{
@@ -34,3 +35,4 @@ export default function Dashboard() {
         </div>
     )
 }
+export default observer(Dashboard);
