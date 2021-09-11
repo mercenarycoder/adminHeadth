@@ -1,7 +1,6 @@
 import { makeObservable, observable, action } from "mobx";
 import register from "../components/register/register";
 import axios from 'axios';
-import {LoginHandler} from '../../MobxState/LogInfo';
 
 
 class LogInfo {
