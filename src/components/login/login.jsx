@@ -1,11 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
+import {Redirect} from 'react-router-dom';
 import './login.css';
 import Button from '../../utilities/button/Button';
 import {Link} from 'react-router-dom';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import {observer} from 'mobx-react-lite';
+import {emailChecker,passwordStrength} from '../../FunctionsValidator/BasicVerifier'
+import Popup from './registerPop';
+
 
 function Login(props) {
+    const [email,setEmail]=useState(null);
+    const [pass,setPass]=useState(null);
     const redirectIt=function(e){
         e.preventDefault();
         // writing code here to temporaily pushing it to dashboard page
