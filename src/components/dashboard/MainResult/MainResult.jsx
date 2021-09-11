@@ -10,7 +10,7 @@ import Report from '../../../insiders/reports/Reports';
 import Prescriptions from '../../../insiders/Prescriptions/Prescriptions';
 import Vaccination from '../../../insiders/Prescriptions/Vaccination';
 
-function MainResult() {
+function MainResult(props) {
     return (
             <div className="main2">
                 <Profile/>

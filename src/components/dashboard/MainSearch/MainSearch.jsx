@@ -3,7 +3,7 @@ import './MainSearch.scss';
 import Search from '../../../insiders/search/Search';
 import Recent from '../../../insiders/recent/Recent';
 
-function MainSearch() {
+function MainSearch(props) {
     return (
         <div>
             <div className="main1">
